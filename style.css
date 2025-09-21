@@ -1,19 +1,90 @@
-body{
-    font-family: 'Arial',sans-serif;
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding:0;
+    padding: 0;
     background-color: rgb(186, 208, 226);
-    width:350px;
-    display: flex;
-    align-items: center;
-
-
+    display: flex;               /* Permet de centrer */
+    justify-content: center;     /* Centre horizontalement */
+    align-items: center;         /* Centre verticalement */
+    height: 100vh;               /* Prend toute la hauteur de la fenêtre */
 }
 
-#container{
-    position: absolute;
+/* Container principal */
+#container {
     background-color: #fff;
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    max-width: 90%; /* Responsive sur petit écran */
+}
+
+/* Champ d’ajout */
+#new-task {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Liste des tâches */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f9fc;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    transition: background 0.2s ease-in-out;
+}
+
+#task-list li:hover {
+    background: #e6edf5;
+}
+
+/* Checkbox et texte */
+#task-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#task-list li span {
+    flex-grow: 1;
+}
+
+/* Boutons */
+#task-list li button {
+    margin-left: 6px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s ease-in-out;
+}
+
+#task-list li button:first-of-type {
+    background-color: #007bff;
+    color: white;
+}
+
+#task-list li button:first-of-type:hover {
+    background-color: #0056b3;
+}
+
+#task-list li button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+}
+
+#task-list li button:last-of-type:hover {
+    background-color: #a71d2a;
 }
