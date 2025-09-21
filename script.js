@@ -33,8 +33,17 @@ function addTask(taskValue, isCompleted = false) {
     deleteButton.textContent = 'Delete';
     deleteButton.addEventListener('click', deleteTask);
 
+    const ajoutedate = document.createElement('input');
+    ajoutedate.type = 'date';
+    ajoutedate.name = 'ajoutedate';
+    ajoutedate.valueAsDate = new Date();
+
+    
+    
+
     li.appendChild(checkbox);
     li.appendChild(text);
+    li.appendChild(ajoutedate);
     li.appendChild(editButton);
     li.appendChild(deleteButton);
 
